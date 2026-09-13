@@ -1,0 +1,12 @@
+part,quantity,description,cost / unit (USD),link,datasheet,distributor,manufacturer
+DFR1146,1,SBC,192.5,https://www.digikey.my/en/products/detail/dfrobot/DFR1146/23028653,https://docs.lattepanda.com/content/mu_edition/introduction/,DigiKey,DFRobot
+custom PCBs,1,to hold all the parts,~400,https://jlcpcb.com/,N/A,JLCPCB,JLCPCB
+BR-101052-200,1,acrylic tube 200mm len.,170,https://bluerobotics.com/store/watertight-enclosures/locking-series/wte-locking-tube-r1-vp/,https://bluerobotics.com/wp-content/uploads/2026/05/WTE-DATASHEET-RevC.5-MAY2026.pdf,BlueRobotics,BlueRobotics
+BR-100495,2,clear polycarbonate dome,42,https://bluerobotics.com/store/watertight-enclosures/locking-series/wte-end-cap-vp/,https://bluerobotics.com/wp-content/uploads/2026/05/WTE-DATASHEET-RevC.5-MAY2026.pdf,BlueRobotics,BlueRobotics
+BR-100665,1,o-ring flange,50,https://bluerobotics.com/store/watertight-enclosures/locking-series/wte-flange-vp/,https://bluerobotics.com/wp-content/uploads/2026/05/WTE-DATASHEET-RevC.5-MAY2026.pdf,BlueRobotics,BlueRobotics
+BR-102993-002,1,aluminum end cap 10x M10,42,https://bluerobotics.com/store/watertight-enclosures/locking-series/wte-end-cap-vp/,https://bluerobotics.com/wp-content/uploads/2026/05/WTE-DATASHEET-RevC.5-MAY2026.pdf,BlueRobotics,BlueRobotics
+BR-100804,1,pressure relief valve,32,https://bluerobotics.com/store/watertight-enclosures/enclosure-tools-supplies/prv-m10-asm/,https://bluerobotics.com/wp-content/uploads/2026/05/WTE-DATASHEET-RevC.5-MAY2026.pdf,BlueRobotics,BlueRobotics
+BR-100574,1,o-ring pick,0,https://bluerobotics.com/store/watertight-enclosures/enclosure-tools-supplies/tool-o-ring-pick-r1/,https://bluerobotics.com/wp-content/uploads/2026/05/WTE-DATASHEET-RevC.5-MAY2026.pdf,BlueRobotics,BlueRobotics
+BR-103290-200,2,narrow rails 200N,29,https://bluerobotics.com/store/watertight-enclosures/locking-series/watertight-enclosure-rails-set/,https://bluerobotics.com/wp-content/uploads/2025/01/WTE-RAILS-DATASHEET-RevA-FEB2025.pdf,BlueRobotics,BlueRobotics
+BR-103291-400,1,rect. tray,24,https://bluerobotics.com/store/watertight-enclosures/locking-series/watertight-enclosure-rectangular-tray/,https://bluerobotics.com/wp-content/uploads/2025/01/WTE-RAILS-DATASHEET-RevA-FEB2025.pdf,BlueRobotics,BlueRobotics
+BR-103292-400,3,circ. tray,27,https://bluerobotics.com/store/watertight-enclosures/locking-series/watertight-enclosure-circular-tray/,https://bluerobotics.com/wp-content/uploads/2025/01/WTE-RAILS-DATASHEET-RevA-FEB2025.pdf,BlueRobotics,BlueRobotics
