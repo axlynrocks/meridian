@@ -257,3 +257,13 @@ also, i looked around for connectors and i might consider using Samtec AccliMate
 note: just realized .csv files were included in the gitignore, removed that
 
 **total time spent: 2.05 hours**
+
+# september 14: researching AUV components: thruster edition pt.1
+
+note: i'm planning to change both the hull, external structure, and thrusters in a future version, v1's going to be a pretty minimal version of the whole AUV
+
+![thruster layout for 5 DOF](journal_images/thruster_layout_5DOF.png)
+
+they're going to be in a cross-like formation with 2 xtra thrusters in the middle for movement in the z axis, stabilization, and roll, giving the AUV a total of 5 DOF, 3 translation and 2 rotation
+
+**total time spent: 1 hour**
