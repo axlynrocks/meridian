@@ -267,3 +267,23 @@ note: i'm planning to change both the hull, external structure, and thrusters in
 they're going to be in a cross-like formation with 2 xtra thrusters in the middle for movement in the z axis, stabilization, and roll, giving the AUV a total of 5 DOF, 3 translation and 2 rotation
 
 **total time spent: 1 hour**
+
+# september 15: researching AUV components: thruster edition pt.2 (abridged)
+
+note: BlueRobotics replied, i'll be contacting their sales dept. to see if i can score a couple of free samples hehe >:3c
+
+i looked at some designs for how to design the [thrusters](https://en.wikipedia.org/wiki/Underwater_thruster) and what i came back with was mostly that sealing anything with that many moving parts gets inefficient and hard way too fast. instead, there are 2 main methods for motors underwater: completely filling any cavities with mineral oil, _preventing_ water from seeping into the motor, or only completely sealing certain electrically active parts like connectors and control boards, leaving the motor itself with its stator and rotor in direct contact with water.
+
+so instead of custom designing a thruster, right now i'm looking for thrusters and motors i can buy to use for the propulsion (and potentially other appendages)
+
+found this: the [APISQUEEN U2 MINI 1.3Kg Underwater Thruster 16V 130W](https://www.underwaterthruster.com/products/apisqueen-u2-mini-1-3kg-underwater-thruster-16v-130w) for $25 each, the only drawback (for this and other thrusters) is that in order to use these, i'll have to strip the connector off for the cable to fit into the [cable penetrators](https://bluerobotics.com/store/cables-connectors/penetrators/wetlink-penetrator-jpt/) on the back of the AUV
+
+there's also this [motor](https://www.underwaterthruster.com/products/waterproof-brushless-motor-100w-2418-corrosion-and-oxidation-resistant-for-use-in-underwater-robots-rovs-unmanned-boats-etc) which i think would be a good choice for the arm, MSIS SLAM or the tether.
+
+i really would like to custom build a thruster like the [T200](https://bluerobotics.com/store/thrusters/t100-t200-thrusters/t200-thruster-r2-rp/), maybe in v2
+
+![BlueRobotics T200 diagram](journal_images/bluerobotics_T200_diagram.png)
+
+note: no lapse this time, did this throughout the day in class :<
+
+**total time spent: 1 hour**
