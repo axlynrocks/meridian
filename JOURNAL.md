@@ -287,3 +287,37 @@ i really would like to custom build a thruster like the [T200](https://bluerobot
 note: no lapse this time, did this throughout the day in class :<
 
 **total time spent: 1 hour**
+
+# september 16: researching AUV components: subsystem module component edition pt.1 ft. external structure
+
+the external structure is going to be comprised of 4 aluminum rods arranged around and parallel to the hull, for the external sensors and other peripherals to be connected, considering making the brackets connecting the rods to the hull out of something FDM printed for increased structural stability, as opposed to SLA specifically because this doesn't need to be waterproof (also have to look at infill patterns more later)
+
+about the thrusters, in order to offload movement and stabilization tasks i'll have to include 8 independent ESCs on the propulsion control module and maybe a gyro/accelerometer for dead reckoning with it (before you ask, yes i'm too broke to afford a DVL, no i don't think it's crucial for navigation _yet_)
+
+looking at the ST website (aka. glorified ads) for [motor control related stuff](https://www.st.com/content/st_com/en/ecosystems/stm32-motor-control-ecosystem.html), i'm considering integrating one of those into the propulsion control module to reduce overhead and get something maybe like realtime stabilization
+
+due to the limited space constraints i'll be separating the propulsion control module from the peripheral motor control module (also i have to figure out the optimal placement for the components to not overheat)
+
+some the sensors will be located on the sensor control module, however most of the sensors have to be situated on the external rods via a bar clamp mount similar to [this commercially available one](https://www.bulletpointmountingsolutions.com/products/quick-adjust-bar-clamp-mount-with-20mm-connector-end-nubby-edition-fits-0-5-to-2-bars)
+
+![a generic commercially available bar clamp mount](generic_bar_clamp_mount.png)
+
+as the objective of this whole system is that everything remains completely modular. i'll also need to kinda think about sealing modules outside the hull with o-rings or something, i was thinking of FDM printing rectangular TPU o rings for the exterior modules similar to how the hull's structured, but maybe with a hinged cover instead.
+
+the sensors that could be located inside besides those already mentioned above (which tbh are just the gyro and accelerometer) include a magnetometer (will have to consider its placement relative to the motors and other sources of magnetic interference) a temperature sensor to check if it's overheating, and leakage sensors around the hull's interior and cable penetrators (to make sure i don't end up frying my hardware :p)
+
+on the other hand, the ones that i'm thinking of placing outside (most likely in v2) are a hydrophone, underwater optical / acoustic communication, a DVL, water
+
+note: i'm just going to go ahead and include an MCU on each subsystem to keep the load off of the compute module
+
+the power management module's going to have to manage recharging and communicate with the other modules for a whole lot of power saving optimizations and stuff. for v1, i'm going to include solar cells on the top of the hull for it to recharge when surfacing on low power. one major challenge however is the fact that the batteries used will generate a _considerable_ amount of heat and i'll need to figure out a way to cool it (or i might push that to v2)
+
+note: went afk for a bit to get some tea
+
+now for the thing that will (admittedly) probably be the single most challenging part of this design: the carrier module (note that i am NOT good at making high-speed PCBs, but you know what they say, "make it exist now, make it perfect later")
+
+the compute module carrier's going to be based around the LattePanda Mu and have external storage,
+
+TBC
+
+**total time spent: 1 hour**
