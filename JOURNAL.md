@@ -321,3 +321,25 @@ the compute module carrier's going to be based around the LattePanda Mu and have
 TBC
 
 **total time spent: 1 hour**
+
+# september 17: researching AUV components: subsystem module component edition pt.2
+
+the compute module carrier's going to be based around the LattePanda Mu, have external storage and all the GPIO connectors i'll possibly need to connect it with other stuff
+
+![LattePanda Mu dimensions](journal_images/lattepanda_mu_dimensions.png)
+
+note: i realized that the Mu's dimensions won't fit in the roughly 60\*60mm space provided by the 100mm circular plate, so i have the choice of either using a rectangular plate (sacrificing density) or increasing the diameter (and the price) of the AUV hull
+
+i'll be basing my carrier off of [these resources](https://github.com/LattePandaTeam/LattePanda-Mu) kindly provided by the LattePanda team! i'm going through the docs to get a brief understanding of the pinout and other requirements before designing the carrier board
+
+for the edge connector it uses a standard 260 pin DDR4 SODIMM one with at least >5.2mm clearance to accomodate for retention screws and other passive components, and it's also recommended to use SMD M2 standoffs to secure the compute module to the carrier
+
+for the power supply, it mentions that its min voltage is 9V, its max is 20V with the typical voltage at either 12 or 15V, and that the recommended wattage varies with the 2 processors used (the DFR1146 uses an Intel N100, at >10W with a minimum 50% margin)
+
+the rest of the details i'll figure out in due time while making the carrier board cos right now i'm thinking about how to connect all the boards and their peripherals.
+
+note: if you're wondering why i'm spending so much time researching stuff and not making stuff yet is cos i'm tryna get a complete understand of what i'm workin with here (also listen to this [bossa nova playlist](https://www.youtube.com/watch?v=aZyxGDfXXl8))
+
+note: forgot to push yesterday TwT
+
+**total time spent: 1.1 hours**
