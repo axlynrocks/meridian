@@ -343,3 +343,42 @@ note: if you're wondering why i'm spending so much time researching stuff and no
 note: forgot to push yesterday TwT
 
 **total time spent: 1.1 hours**
+
+# september 18: researching AUV components: enclosure edition pt.2 (the sequel)
+
+so considering the size of the internal components, i'm thinking of increasing the AUV's diameter to the 130mm dia. 300mm len. model, with the rest remaining mostly the same, just with diff. dimensions to fit the new hull (and for some reason it's only available in aluminum i liked the acrylic one more ;A;)
+
+| part          | quantity | description                     | cost / unit (USD) |
+| ------------- | -------- | ------------------------------- | ----------------- |
+| BR-106280-300 | 1        | aluminum tube 300mm len.        | 210               |
+| BR-102597     | 1        | clear polycarbonate dome        | 95                |
+| BR-102200     | 2        | o-ring flange                   | 125               |
+| BR-102203-002 | 1        | aluminum end cap 5x M14, 5x M10 | 71                |
+| BR-100804     | 1        | pressure relief valve           | 32                |
+| BR-100574     | 1        | o-ring pick                     | 0                 |
+
+bringing its subtotal to $658 (idt i can afford this...)
+
+![jlccnc page](journal_images/jlccnc_page.png)
+
+at this point, i'm not totally convinced that increasing the size's the best way to go and i am highly convinced that i should be custom manufacturing _at least_ the hull
+
+note: for anyone watching the lapse if i pause for a bit it's cos i'm staring at my ruler trying to picture how everything fits together
+
+if i (slightly) compromise on cooling by putting the compute module and carrier right on top of the batteries (and also barely fitting it on either side of the PCB which is guaranteed to have to be double sided) with the compute module either oriented horizontally (which means that it's going to stick outside the 60mm wide PCB) or vertically
+
+| part          | quantity | description              | cost / unit (USD) |
+| ------------- | -------- | ------------------------ | ----------------- |
+| BR-100495     | 1        | clear polycarbonate dome | 42                |
+| BR-100665     | 2        | o-ring flange            | 50                |
+| BR-102993-002 | 1        | aluminum end cap 10x M10 | 42                |
+| BR-100804     | 1        | pressure relief valve    | 32                |
+| BR-100574     | 1        | o-ring pick              | 0                 |
+
+note: also lapse paused for about 15 mins here
+
+total cost: $216 (slightly better)
+
+TBC
+
+**total time spent: 1 hour**
