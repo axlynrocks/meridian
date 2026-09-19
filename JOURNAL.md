@@ -382,3 +382,35 @@ total cost: $216 (slightly better)
 TBC
 
 **total time spent: 1 hour**
+
+# september 19: researching AUV components: subsystem module component edition pt.3
+
+went ahead and imported the RAILS and watertight enclosure files into fusion and realized it WOULD NOT be able to hold anything inside without a whole lot of compromises (and i get that the whole AUV design thing is inherently space constrained but still)
+
+![cad window showing my attempt at visualizing 200mm of painful compromises](journal_images/RAILS_200mm_fusion.png)
+
+so that means i'm going with a 100mm dia. 300mm len. sized AUV, _and_ manufacturing a custom hull to fit the rods and other stuff, maybe a tether for hybrid AUV/ROV use or something
+
+looking at the (estimated) dimensions of [this ESC PCB layout](https://deepbluembedded.com/stm32-esc-pcb-design-foc-esc-bldc-schematic/#more-10615) i'm pretty sure that i'll have to make this a double sided pcb, have multiple sections or both.
+
+about the cable penetrators, i wasn't able to find the diameter of the [previously mentioned thruster](https://www.underwaterthruster.com/products/apisqueen-u2-mini-1-3kg-underwater-thruster-16v-130w), so i'll be switching to a different thruster (preferably one with actual documentation)
+
+currently looking for alternative cable glands and thrusters that work together, and i've been looking at the structure of the T200 (again), where the only sealed bit's apparently the cable and stator, using a motor with an external rotor
+
+note: looking at the [IP ratings](https://en.wikipedia.org/wiki/IP_code) and i can't exactly wrap my head around how a product or anything else really can have a rating of IP58 as the 5 means "Dust protected, Ingress of dust is not entirely prevented, but it must not enter in sufficient quantity to interfere with the safe operation of the equipment." and the 8 "Immersion, 1 meter (3 ft 3 in) or more depth". how on earth can something let dust in but not water. what.
+
+anyways seeing as apparently all the properly documented thrusters cost more than $200 per unit i'll just have to either get something cheap(er) or make my own
+
+time to start looking at the ESC structure, i'll be basing most of the design off of [the OpenESC-20x20](https://github.com/OpenDrone-hw/OpenESC-20x20) (also i'm more than 99% sure the website was ai generated, and i'm concerned for the schematic and PCB quality) and [this STM32 ESC PCB Design](https://deepbluembedded.com/stm32-esc-pcb-design-foc-esc-bldc-schematic/#deepdrive-stm32-esc-pcb-project-video)
+
+most BLDCs are 3-phase, which means they'll need 3 pins per motor, and because i'll have to strip any included connectors off, i'll be using screwless side entry terminal blocks to secure the individual wires on. (not screwed ones for ease of access when in the hull)
+
+the propulsion control module will be split into 2x 4-in-1 ESC units and a flight controller for modularity, horizontal space optimization, and most of all: **making sure i can replace them ~~if~~ when they inevitably explode**
+
+the components of an ESC are more or less the following: (stolen from [this article](https://www.tytorobotics.com/blogs/articles/what-is-an-esc-how-does-an-esc-work))
+
+the MCUs (one MCU per individual ESC) run firmware that controls the gate drivers which are in turn connected to the MOSFETs connected straight to the ESC terminals, track position and velocity via [back EMF modeling](https://developerhelp.microchip.com/xwiki/bin/view/applications/motors/control-algorithms/bldc/position/), and communicate back to the flight controller
+
+TBC
+
+**total time spent: 3.15 hours**
