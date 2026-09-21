@@ -414,3 +414,21 @@ the MCUs (one MCU per individual ESC) run firmware that controls the gate driver
 TBC
 
 **total time spent: 3.15 hours**
+
+# september 20: researching AUV components: subsystem module component edition pt.4
+
+note: can that thing _really_ be called a flight controller? (if not for convention, it's a swim controller at best)
+
+the protocol (in this case preferably Cyphal, but DSHOT's fine too) is what the flight controller with its firmware (preferably Betaflight) will use to communicate with the ESCs with its firmware (preferably AM32)
+
+![overpriced joystick for $233.95](journal_images/overpriced_joystick_page.png)
+
+now the reason i'm choosing AM32 is for its larger community compared to other ESC firmware (eg. ESCape32) and the fact the BLHeli_S has been **DEAD** for the last what 4 years
+
+might also get a joystick or somethin to control this with eventually
+
+going to start on the ESC first and then move to the FC after, stay tuned!
+
+note: not a lot of writing, am sick rn :< also paused lapse for 20 mins, weird commit time cos i realized i didnt push until the next day
+
+**total time spent: 1 hour**
