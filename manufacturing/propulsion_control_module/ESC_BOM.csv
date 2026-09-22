@@ -1,0 +1,3 @@
+part,quantity,description,cost / unit (USD),link,datasheet,distributor,manufacturer
+STM32G031G8U6,4,MCU for BLDC control,2.49,https://www.digikey.com/en/products/detail/stmicroelectronics/STM32G031G8U6/10300275,https://www.st.com/resource/en/datasheet/stm32g031c6.pdf,Digikey,STMicroelectronics
+SIR5208DP-T1-RE3,24,MOSFETs,1.71,https://www.digikey.my/en/products/detail/vishay-siliconix/SIR5208DP-T1-RE3/25802547,https://www.vishay.com/docs/62488/sir5208dp.pdf,Digikey,Vishay Siliconix

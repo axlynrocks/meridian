@@ -454,3 +454,33 @@ note: it happened again, weird commit time cos i realized i didnt push until the
 serious note to self: enough stopping half way, taking a break, and forgetting to resume lapse after that, **all entries after this MUST be properly recorded and pushed.**
 
 **total time spent: 1.1 hours**
+
+# september 21: designing the propulsion controller ESC pt.2
+
+note: for the first 20 mins, i chose not to record my desktop cos i kinda maybe had a class going on :/ (if this gets deflated then oh well)
+
+decided to use the smaller UFQFPN-28 package with a little bit more memory, the [`STM32G031G8U6`](https://www.digikey.com/en/products/detail/stmicroelectronics/STM32G031G8U6/10300275) instead to practice high density PCB routing (and to save money on build costs)
+
+made a manufacturing folder to put the BOMs, gerbers and drill files in later for ease of access, each folder represents one module, and in the case of the propulsion control board will have 2 sets of files, one for the ESC and one for the FC (even though i'm going to have 2 ESCs on hand later)
+
+now i'm looking at the MOSFETs i'll be using for this ESC, (again, thanks to TI for the oddly helpful guides, like [this series on MOSFETs](https://www.ti.com/lit/an/slvafg3g/slvafg3g.pdf))
+
+note: you can find more guides like the above on [this page](https://www.ti.com/technical-documents/techdoc)
+
+with specifically [this guide to picking MOSFETs for motor control](https://www.ti.com/lit/ta/sszt819/sszt819.pdf?ts=1790045513499) i more or less got the following: i'm going to be using a higher density package and _possibly_ one with a metal top enabling the use of a heatsink (although i'm not entirely certain how i would find 24 tiny heatsinks per board) and account for about power losses from switching and conduction (but primarily conduction)
+
+note: each bldc has 3 phases and 2 MOSFETs per phase (see [this](https://electronics.stackexchange.com/questions/278502/why-do-bldc-escs-have-more-than-3-mosfets) for an explanation as to why) and with 4 motors that comes out to 24
+
+i'm still kind of lost as to where to start picking MOSFETs, so i'm just looking online for some. i searched on Digikey for ones with a footprint designed for heat dissipation (in my case the PowerPAK_SO-8, it also helps that KiCad has the `PowerPAK_SO-8_Single` footprint), a 20V voltage from source to drain (which is how much it can support to drive the motor) and got the [`SIR5208DP-T1-RE3`](https://www.digikey.my/en/products/detail/vishay-siliconix/SIR5208DP-T1-RE3/25802547)
+
+in order to flash the AM32 firmware and communicate via DSHOT with the ESC i'll need to use a connector, and i'm still a little bit lost as to what the pinout should be for the signal and other data transmission, right now i'm thinking of using a UART connection to program it (or being lazy and shoving a USB-C connector on it instead) and one wire for DSHOT, but i'm not entirely sure if this is even how it's supposed to work so uhhhhhhh back to reading...
+
+![neat single motor ESC design by AM32](journal_images/am32_hardware_design.png)
+
+apparently i was right (at least according to [the AM32 wiki's hardware design](https://wiki.am32.ca/development/Hardware-Design.html)), now to figure out how to bash 4 of them together on ONE PCB, probably going to refer to [this open source ESC](https://github.com/IOkFly-BLENDERIS/IOkFly-Race-AM32-4in1-ESC) cos unfortunately i don't entirely trust [OpenESC-20x20](https://github.com/OpenDrone-hw/OpenESC-20x20) (it's got AI all over, no offense to the designers though, it's not like i'm any better at making stuff lol)
+
+might also consider somehow incorporating the FC's connector following [Betaflight standards](https://betaflight.com/docs/development/manufacturer/connector-standard)
+
+TBC
+
+**total time spent: 1.77 hours**
