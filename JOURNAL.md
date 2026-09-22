@@ -29,6 +29,8 @@ sonar array
 
 the water sampling will use a peristaltic pump to extract water from its surroundings into a chamber for later analysis
 
+![picture of the LattePanda Mu stolen from the LattePanda docs site](journal_images/lattepanda_mu.png)
+
 (very) rough BOM: (for v1)
 note: the stuff listed here includes the base AUV, water sampling, and recharging
 hull and other enclosure bits: about 300
