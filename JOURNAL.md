@@ -432,3 +432,25 @@ going to start on the ESC first and then move to the FC after, stay tuned!
 note: not a lot of writing, am sick rn :< also paused lapse for 20 mins, weird commit time cos i realized i didnt push until the next day
 
 **total time spent: 1 hour**
+
+# september 21: designing the propulsion controller ESC pt.1
+
+note: making this quick, got an exam to study for!
+
+time to get to work designing the ESC!!!
+
+according to the [Betaflight wiki](https://betaflight.com/docs/wiki/getting-started/hardware/esc-firmware#am32) it's compatible with most 32-bit MCUs, so i'll be looking for an MCU that'd be ideal for
+
+it has to have a small enough package size to fit 4 on a board with all the MOSFETS too, maybe a UFQFPN-32 or 48 would do the job
+
+![the STM32G031K6Ux symbol and default footprint from the kicad libraries](journal_images/kicad_STM32G031K6Ux_footprint.png)
+
+found one (also it's family is more or less stated to be supported), the `STM32G031K6U6`, it's pretty minimal so it seems to be perfect for this job
+
+i'm going to be designing each of the PCBs in a separate KiCad project cos it _still_ doesn't support multiboard designs
+
+note: it happened again, weird commit time cos i realized i didnt push until the next day... hmm i really gotta remember to push
+
+serious note to self: enough stopping half way, taking a break, and forgetting to resume lapse after that, **all entries after this MUST be properly recorded and pushed.**
+
+**total time spent: 1.1 hours**
