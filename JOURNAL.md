@@ -488,3 +488,11 @@ TBC
 note: put down the wrong date, sep 21 instead of sep 22
 
 **total time spent: 1.77 hours**
+
+# september 23: temporary journal entry
+
+note: there's no content here (yet) i'm just pushing this to check what happened to my 32 day streak... cos apparently it's missing so now i'm uploading all my progress to another project to see if it's a bug with the streak system or something else, also the **STILL UNAPPROVED** project shows 18.1 hours, while the other new test project shows 16.4 hours (i really need to get someone to review it ASAP like why does it even take so long it's been more than a week at this point like are we serious :/ welp what cn i do about it)
+
+![me when no streak, no streak saves, and most certainly no approval :<](journal_images/forge_meridian_page.png)
+
+**total time spent: 1 hour**
