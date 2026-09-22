@@ -455,7 +455,7 @@ serious note to self: enough stopping half way, taking a break, and forgetting t
 
 **total time spent: 1.1 hours**
 
-# september 21: designing the propulsion controller ESC pt.2
+# september 22: designing the propulsion controller ESC pt.2
 
 note: for the first 20 mins, i chose not to record my desktop cos i kinda maybe had a class going on :/ (if this gets deflated then oh well)
 
@@ -482,5 +482,7 @@ apparently i was right (at least according to [the AM32 wiki's hardware design](
 might also consider somehow incorporating the FC's connector following [Betaflight standards](https://betaflight.com/docs/development/manufacturer/connector-standard)
 
 TBC
+
+note: put down the wrong date, sep 21 instead of sep 22
 
 **total time spent: 1.77 hours**
