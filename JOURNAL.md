@@ -489,10 +489,28 @@ note: put down the wrong date, sep 21 instead of sep 22
 
 **total time spent: 1.77 hours**
 
-# september 23: temporary journal entry
+# september 23: designing the propulsion controller ESC pt.3
 
 note: there's no content here (yet) i'm just pushing this to check what happened to my 32 day streak... cos apparently it's missing so now i'm uploading all my progress to another project to see if it's a bug with the streak system or something else, also the **STILL UNAPPROVED** project shows 18.1 hours, while the other new test project shows 16.4 hours (i really need to get someone to review it ASAP like why does it even take so long it's been more than a week at this point like are we serious :/ welp what cn i do about it)
 
 ![me when no streak, no streak saves, and most certainly no approval :<](journal_images/forge_meridian_page.png)
 
-**total time spent: 1 hour**
+now for the actual stuff:
+
+btw i rearranged the folders again cos i might have forgot about where to put the rest of the kicad project files for each (i honestly hope i don't have to rearrange them again)
+
+this time it accounts for docs (not good ones but docs nonetheless) and the journal and each subsystem module has its own folder and project
+
+anyways now finally back to the whole design stuff,
+
+i'm going to be using a [`DRV8300`](https://www.ti.com/lit/ds/symlink/drv8300.pdf), specifically the [`DRV8300DRGER`](https://www.digikey.my/en/products/detail/texas-instruments/DRV8300DRGER/13918763) (and for a while i was confused as to the difference between that and the `DRV8300NRGER` and apparently the `DRV8300DRGER` has enhanced undervolatge lockout protection, or at least [that's what TI says](https://www.ti.com/compare-products/?id=12605&type=GPT&mode=alternate-opn&partList=DRV8300NRGER,DRV8300UDRGER&sticky=true))
+
+it's also one of the listed parts in AM32's reference hardware design
+
+![DRV8300 24 pin VQFP pinout symbol by yours truly](journal_images/kicad_DRV8300_symbol.png)
+
+i made a symbol for the `DRV8300` 24-pin VQFP following the pinout listed in [the `DRV8300`'s datasheet](https://www.ti.com/lit/ds/symlink/drv8300.pdf) and attached it to the `VQFN-24-1EP_4x4mm_P0.5mm_EP2.45x2.45mm` footprint
+
+TBC
+
+**total time spent: 1.32 hours**
