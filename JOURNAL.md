@@ -514,3 +514,48 @@ i made a symbol for the `DRV8300` 24-pin VQFP following the pinout listed in [th
 TBC
 
 **total time spent: 1.32 hours**
+
+# september 27: designing the propulsion controller ESC pt.4
+
+note: finally back after a 3 day hiatus!!! (was busy with a competition)
+
+so i'll need one gate driver per motor, coming out to 4 of them
+
+the other components listed in the AM32 hardware design are just a couple of voltage regulators for 3.3V and 5V power from a battery as a power source, the `TS3480CX50 RFG` and `HT7530S` respectively, as well as a `INA180B` current sense amplifer (though i'm not sure how many of those i should have)
+
+now i'm just slightly confused on how i should wire the 4 individual ESCs together and if Betaflight supports 2x 4-in-1 ESCs
+
+research time!
+
+so from what i'm seeing, according to the [Betaflight connector standards]([Betaflight standards](https://betaflight.com/docs/development/manufacturer/connector-standard)
+
+![betaflight standard jst sh connector](journal_images/betaflight_standard_jst_sh.png)
+
+| pin no. | signal name | description |
+| ------- | ----------- | ----------- |
+| 1       | VBAT        | power       |
+| 2       | GND         | ground      |
+| 3       | current     | current     |
+| 4       | telemetry   | telemetry   |
+| 5       | signal 1    | motor 1     |
+| 6       | signal 2    | motor 2     |
+| 7       | signal 3    | motor 3     |
+| 8       | signal 4    | motor 4     |
+
+note: table stolen from betaflight wiki
+
+- of course, there have to be 2 pins for power, `VDD` and `GND` respectively
+- each motor uses 1 pin for the DSHOT signal, so a total of 4
+- and these 4 motors can share 1 telemetry pin (the whole 4-in-1 thing comes from them sharing power and a board, but besides that, they don't communicate with each other and instead ac)
+
+lookiing back at the [APISQUEEN U2 MINI 1.3Kg Underwater Thruster 16V 130W](https://www.underwaterthruster.com/products/apisqueen-u2-mini-1-3kg-underwater-thruster-16v-130w)'s specs
+
+it takes 8A, 12-16V (about 3 to 4S LiPo) so i'll have to use some solder pads or terminal blocks supporting it instead of JST PH connectors as those only support up to 2A
+
+now there's the problem of uploading both the firmware and the bootloader to the MCUs onboard, cos most ESCs aren't designed with [flashing either easily](https://oscarliang.com/flash-am32-blheli32-esc/) in mind, so i'll also have to include a breakout to make my job a little bit easier later, with 1x `SWD` and 1x `SWCLK` per MCU, and a common `GND` (tbh i would've just added an edge connector for the [STLINK-V3MINIE](https://www.st.com/en/development-tools/stlink-v3minie.html) but there isn't going to be enough PCB real estate to have 4 of them) probably with another JST SH connector
+
+bringing the total connector count to 1 JST SH for connecting to the ESC, another JST SH for flashing the firmware and bootloader, 4 sets of 3 solder pads for the motors, and 2 solder pads for power.
+
+TBC
+
+**total time spent: 2.22 hours**
