@@ -559,3 +559,27 @@ bringing the total connector count to 1 JST SH for connecting to the ESC, anothe
 TBC
 
 **total time spent: 2.22 hours**
+
+# september 28: designing the propulsion controller ESC pt.5
+
+about the bootloader, i asked about it in the AM32 discord:
+
+> "i'm trying to make an ESC with the STM32G071, but i'm not entirely sure which bootloader to be using, also are there any other necessary files to flash before uploading the AM32 firmware?"
+
+note: changed the MCU _again_ cos apparently AM32 only(?) [supports a select few MCUs](https://github.com/am32-firmware/AM32#hardware) so now i'm going with the [`STM32G071KBU6N`](https://www.st.com/en/microcontrollers-microprocessors/stm32g071kb.html)
+
+now finally, after all this hassle (and a little more waiting for a response) i can work on the schematic!
+
+![esc mcu power supply schematic](journal_images/esc_mcu_power_supply_sch.png)
+
+so, copying the MCU's power supply schematic with decoupling capacitors and all we get the sum total of... wait for it...
+
+![esc mcu decoupling caps schematic](journal_images/esc_mcu_decoupling_caps_sch.png)
+
+**2 capacitors.** (cos on the 32-pin UFQFP, `VREF` and `VBAT` aren't present)
+
+i'm changing out the `HT7530S` for the `HT7533-1` with a SOT-89-3 footprint instead, for _hopefully_ better thermal distribution (also cos it matches the kicad symbol and footprint) and the `TS3480CX50 RFG` for a `HT7550-1`
+
+edited the README to actually say something about the project, with a badly photoshopped sacabambaspis cameo from the internet as a placeholder for not having any images to show
+
+**total time spent: 1.02 hours**
