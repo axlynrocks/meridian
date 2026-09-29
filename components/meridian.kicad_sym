@@ -74,7 +74,7 @@
 		)
 		(symbol "DRV8300_0_0"
 			(pin input line
-				(at -11.43 -1.27 0)
+				(at -11.43 3.81 0)
 				(length 2.54)
 				(name "INLA"
 					(effects
@@ -92,7 +92,7 @@
 				)
 			)
 			(pin input line
-				(at -11.43 -3.81 0)
+				(at -11.43 1.27 0)
 				(length 2.54)
 				(name "INLB"
 					(effects
@@ -110,7 +110,7 @@
 				)
 			)
 			(pin input line
-				(at -11.43 -6.35 0)
+				(at -11.43 -1.27 0)
 				(length 2.54)
 				(name "INLC"
 					(effects
@@ -146,7 +146,7 @@
 				)
 			)
 			(pin input line
-				(at -11.43 16.51 0)
+				(at -11.43 11.43 0)
 				(length 2.54)
 				(name "MODE"
 					(effects
@@ -182,7 +182,7 @@
 				)
 			)
 			(pin output line
-				(at 11.43 -12.7 180)
+				(at 11.43 -16.51 180)
 				(length 2.54)
 				(name "GLC"
 					(effects
@@ -200,7 +200,7 @@
 				)
 			)
 			(pin output line
-				(at 11.43 -10.16 180)
+				(at 11.43 -3.81 180)
 				(length 2.54)
 				(name "GLB"
 					(effects
@@ -218,7 +218,7 @@
 				)
 			)
 			(pin output line
-				(at 11.43 -7.62 180)
+				(at 11.43 8.89 180)
 				(length 2.54)
 				(name "GLA"
 					(effects
@@ -236,7 +236,7 @@
 				)
 			)
 			(pin input line
-				(at -11.43 3.81 0)
+				(at 11.43 -13.97 180)
 				(length 2.54)
 				(name "SHC"
 					(effects
@@ -254,7 +254,7 @@
 				)
 			)
 			(pin output line
-				(at 11.43 -2.54 180)
+				(at 11.43 -11.43 180)
 				(length 2.54)
 				(name "GHC"
 					(effects
@@ -272,7 +272,7 @@
 				)
 			)
 			(pin output line
-				(at 11.43 7.62 180)
+				(at 11.43 -8.89 180)
 				(length 2.54)
 				(name "BSTC"
 					(effects
@@ -290,7 +290,7 @@
 				)
 			)
 			(pin input line
-				(at -11.43 6.35 0)
+				(at 11.43 -1.27 180)
 				(length 2.54)
 				(name "SHB"
 					(effects
@@ -308,7 +308,7 @@
 				)
 			)
 			(pin output line
-				(at 11.43 0 180)
+				(at 11.43 1.27 180)
 				(length 2.54)
 				(name "GHB"
 					(effects
@@ -326,7 +326,7 @@
 				)
 			)
 			(pin output line
-				(at 11.43 10.16 180)
+				(at 11.43 3.81 180)
 				(length 2.54)
 				(name "BSTB"
 					(effects
@@ -344,7 +344,7 @@
 				)
 			)
 			(pin input line
-				(at -11.43 8.89 0)
+				(at 11.43 11.43 180)
 				(length 2.54)
 				(name "SHA"
 					(effects
@@ -362,7 +362,7 @@
 				)
 			)
 			(pin output line
-				(at 11.43 2.54 180)
+				(at 11.43 13.97 180)
 				(length 2.54)
 				(name "GHA"
 					(effects
@@ -380,7 +380,7 @@
 				)
 			)
 			(pin output line
-				(at 11.43 12.7 180)
+				(at 11.43 16.51 180)
 				(length 2.54)
 				(name "BSTA"
 					(effects
@@ -398,7 +398,7 @@
 				)
 			)
 			(pin input line
-				(at -11.43 -11.43 0)
+				(at -11.43 -6.35 0)
 				(length 2.54)
 				(name "INHA"
 					(effects
@@ -416,7 +416,7 @@
 				)
 			)
 			(pin input line
-				(at -11.43 -13.97 0)
+				(at -11.43 -8.89 0)
 				(length 2.54)
 				(name "INHB"
 					(effects
@@ -434,7 +434,7 @@
 				)
 			)
 			(pin input line
-				(at -11.43 -16.51 0)
+				(at -11.43 -11.43 0)
 				(length 2.54)
 				(name "INHC"
 					(effects
@@ -454,7 +454,7 @@
 		)
 		(symbol "DRV8300_1_0"
 			(pin input line
-				(at -11.43 13.97 0)
+				(at -11.43 8.89 0)
 				(length 2.54)
 				(name "DT"
 					(effects

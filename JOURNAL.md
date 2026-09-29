@@ -583,3 +583,29 @@ i'm changing out the `HT7530S` for the `HT7533-1` with a SOT-89-3 footprint inst
 edited the README to actually say something about the project, with a badly photoshopped sacabambaspis cameo from the internet as a placeholder for not having any images to show
 
 **total time spent: 1.02 hours**
+
+# september 29: designing the propulsion controller ESC pt.6
+
+note: for the ESC schematic (specifically one ESC out of 4 in total on 1 board) i'm adapting from the AM32 hardware reference, but i'll see how i can improve on the design
+
+for the whole module, i'm using the voltage regulators, (the `HT7550-1` and `HT7533-1`) with a connector symbol as a placeholder for the custom solder pads later
+
+![ESC voltage regulators](journal_images/esc_voltage_regulators_sch.png)
+
+the 3-phase motor driver IC itself (the `DRV8300DRGER`)'s just the IC and a couple of caps and diodes
+
+![ESC motor driver IC](journal_images/esc_motor_driver_ic_sch.png)
+
+note: changed the MOSFETs to a more capable (albeit slightly overkill for these thrusters one, i'm intending to upgrade the thrusters in mk. 2) [`SIR696DP-T1-GE3`](https://www.digikey.in/en/products/detail/vishay-siliconix/SIR696DP-T1-GE3/6707749)
+
+another note: instead of calling them versions eg. v1, v2, etc. i have chosen to instead pretend i'm iron man and call them mk.1, mk.2, etc
+
+also realized that these new MOSFETs have a drive voltage of 7.5V, so i'll need to find another voltage regulator, adjustable or otherwise for it, and before you ask, no the `HT75xx` series does not have one
+
+i'm going to be using the `TPS7A4501KTTR` for the mosfets (maybe for the rest too)
+
+note: found some errors in the ESC BOM, fixed them but i'm still not sure which `INA180B` i should be using
+
+TBC
+
+**total time spent: 2.13 hours**
