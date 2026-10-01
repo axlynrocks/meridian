@@ -609,3 +609,21 @@ note: found some errors in the ESC BOM, fixed them but i'm still not sure which 
 TBC
 
 **total time spent: 2.13 hours**
+
+# oct 01: designing the propulsion controller ESC pt.7
+
+cos i still have ABSOLUTELY NO IDEA what i should be wiring together for the telemetry pin, i'm leaving that one unconnected (for now, hopefully)
+
+note: noticed there were unnecessary folders and files in the electronics folder, deleted them and the main project files
+
+decided on the [`INA180B1IDBVR`](https://www.digikey.com/en/products/detail/texas-instruments/INA180B1IDBVR/8105876)
+
+back to the schematic!
+
+![ESC MOSFETS, current sensor, and BEMF divider](journal_images/esc_mosfets_current_sense_bemf_sch.png)
+
+TBC
+
+note: i feel like adding a lot more unnecessary features to the ESC, will do in a bit
+
+**total time spent: 1.27 hours**
