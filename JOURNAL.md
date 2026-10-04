@@ -627,3 +627,27 @@ TBC
 note: i feel like adding a lot more unnecessary features to the ESC, will do in a bit
 
 **total time spent: 1.27 hours**
+
+# oct 02: AUV hull parts pt.1
+
+so, i sent an email (in 2 parts) to the Blue Robotics sales dept. uhhh we'll see what goes on
+
+> hi! good morning / afternoon / evening to the sales department!
+>
+> a brief intro on me - i'm Avery, a high school student who's trying to make and document building a hybrid AUV. i call my project meridian and while i'm making relatively smooth progress with the designing stuff so far, i'm at a loss when it comes to funding and sourcing most of the materials. i'm using a program from Hack Club for most of my funding including PCB manufacturing, however some of the materials i need are rather costly, so this is where Blue Robotics comes in! with your help and sponsorship, i could finally get to building it :D i'd love to give Blue Robotics a shoutout as i am genuinely impressed with your open sourced products and their modular designs!!!
+>
+> my current design for meridian includes the watertight enclosure set (excluding the hull as i'm planning to modify the provided files so i can add some custom attachments to it) as well as a RAILS set for the PCBs i'm currently designing (you can check my progress in the Github repo's contained JOURNAL.md!!!)
+>
+> i'm absolutely open to discussing further about this and if there's anything i could do in exchange for your help i'd really appreciate it if you could let me know!
+>
+> thanks,
+> Avery
+
+and
+
+> and if this isn't too much to ask, could i maybe ask for an ip camera module???
+>
+> thanks again,
+> Avery (who will be forever grateful if they could get their hands on some parts)
+
+**total time spent: 0.1 hours**
