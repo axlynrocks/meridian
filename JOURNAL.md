@@ -651,3 +651,54 @@ and
 > Avery (who will be forever grateful if they could get their hands on some parts)
 
 **total time spent: 0.1 hours**
+
+# oct 05: designing the compute module carrier pt.1
+
+note: renamed the kicad project files to compute_module_carrier instead of carrier_module
+
+welllllll... to design the compute module carrier, i'm going to largely ~~steal~~ adapt from [LattePanda's Lite Carrier for the LattePanda Mu](<https://github.com/LattePandaTeam/LattePanda-Mu/tree/main/Electricals/Examples/[DFR1142]Lite%20Carrier%20for%20LattePanda%20Mu(V2)>) (and their symbols and footprints too)
+
+right so now to look at what goes into a carrier module!
+
+one of the issues i'm facing (that i might've mentioned in an earlier entry) is fitting the compute module on the RAILS
+
+so right now i'm going to put all the stuff together to see how much space i have for the carrier
+
+MY LAPTOP JUST CRASHED TwT
+
+welp
+
+what can i do about it
+
+back to work
+
+![AUV hull 200mm length, 100mm diameter](journal_images/auv_hull_200x100mm.png)
+
+after putting everything together in freecad (btw this is the 200mm ver, i'll expand it to 300mm if i need the extra space) it looks like this, the circular plate at the front's for sensors and stuff, while the rest of the subsystem modules (ie. the compute module carrier, the power management module, and the propulsion control module) sit above or below the rectangular plates
+
+i just realized... i can just add standoffs to the pcb's underside and use the full ~<100mm diameter inside
+
+![AUV hull 200mm length, 100mm diameter but now it has a badly placed compute module sized box in the center](journal_images/auv_hull_compute_module_placement_1_200x100mm.png)
+
+fyi, the box in the center's based off of the compute module's dimensions (excluding the PCB and the relatively large connector) leaving, not a lot of space for everything else eg. traces, parts
+
+so now that i have a _proper_ idea of how to fit it in there, and where the mounting holes, i can look at the connectors and what to breakout! (thinking of looking at CAN for all these MCUs)
+
+i'm planning to have the following non-negotiables:
+
+- something to connect to the FC
+- another something to connect to the sensor board
+- something for power, most likely a barrel jack or an XT60
+- M.2 for data storage on an SSD
+- ethernet for the comms module (mk.2 but why not have it here anyways)
+
+and the more optional stuff:
+
+- a DisplayPort receptacle so i can hook it up to a monitor and debug stuff
+- a couple of USB-C and USB-A receptacles to connect random peripherals
+
+also planning to see if i can ask LattePanda for a free compute module, but i'll work that out later
+
+TBC
+
+**total time spent: 1.85 hours**
