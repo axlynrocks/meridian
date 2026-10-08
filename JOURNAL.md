@@ -736,3 +736,63 @@ now i really have to decide what pins to breakout (also mentioned above)
 for the displayport stuff, i'd have to use the eDP connector on the compute module itself and connect that via an FPC cable to a displayport and since i don't exactly feel like dealing with that sooooooo i'll be using HDMI instead
 
 **total time spent: 1.1 hours**
+
+# oct 08: designing the compute module carrier pt.3
+
+note: i won't be basing the design off of the LattePanda Mini Carrier cos its schematic as of the time of writing is, to put it politely, not _very_ readable
+
+looking at the notes on page 2 of [the schematic](<https://github.com/LattePandaTeam/LattePanda-Mu/blob/main/Electricals/Examples/[DFR1142]Lite%20Carrier%20for%20LattePanda%20Mu(V2)/[DFR1142]Lite%20Carrier%20for%20LattePanda%20Mu(V2).pdf>)
+
+it mentions the following:
+
+> HSIO functions are defined by the BIOS firmware,
+> Cannot be changed in BIOS menu.
+>
+> Before starting design, you should choose one of the available BIOS configurations on: https://github.com/LattePandaTeam/LattePanda-Mu
+> Or contact techsupport for custom your BIOS
+>
+> The default functions are defined as follows:
+>
+> - HSIOO: USB3.2 10Gbps
+> - HSI01: USB3.2 10Gbps
+> - HSI02: PCle 3.0 x1
+> - HSI03: PCle 3.0 x1
+> - HSI08: PCle 3.0 x4 (Lane 0)
+> - HSI09: PCle 3.0 x4 (Lane 1)
+> - HSI010: PCle 3.0 x4 (Lane 2)
+> - HSI011: PCle 3.0 x4 (Lane 3)
+> - HSI06: PCle 3.0 x1
+
+and
+
+> DDI/TCP functions are defined by the BIOS firmware,
+> Cannot be changed in BIOS menu.
+>
+> Before starting design, you should choose one of the available BIOS configurations on: https://github.com/LattePandaTeam/LattePanda-Mu
+>
+> The default functions are defined as follows:
+>
+> - DDIA: eDP 1.4b (the 40Pin connector on the Mu)
+> - DDIB: HDMI 2.0
+> - TCPO: HDMI 2.0
+> - TCP1: USB TypeC (need external PD controller)
+
+which means my choice of connectors is going to be slightly limited... oh well
+
+note: i also emailed LattePanda about potentially getting a sample Mu to work with but they're all on break till oct 08 so i'll be waiting
+
+on the topic of PCIE lanes, i'm thinking of connecting the various boards n stuff via that instead of I2C
+
+i'm going with the default config (the stuff above) for now, to avoid any unnecessary mishaps, there are a lot of non-brokenout pins on the lite carrier, could use those for something else
+
+![recommended feed-through layout with the CDDFN10-3324P and CDSOT236-0504C for use with a HDMI connector](journal_images/hdmi_recommended_feed-through_layout.png)
+
+i was looking at alternatives for the [`AZ1023-04F`](https://www.digikey.com/en/products/detail/amazing/AZ1023-04F/16615406) mentioned in the HDMI section and found the [`CDDFN10-3324P`](https://www.digikey.com/en/products/detail/bourns-inc/CDDFN10-3324P/5019648) and [its datasheet](https://www.bourns.com/docs/Product-Datasheets/CDDFN10-3324P.pdf) recommends for it to be used in conjunction with the [`CDSOT236-0504C`](https://www.digikey.com/en/products/detail/bourns-inc/CDSOT236-0504C/3742074) as well
+
+checking through [the docs](https://docs.lattepanda.com/content/mu_edition/design_guide_hdmi/) to see if i missed out on anything in the schematic... added a diode (`D1`) for power backflow prevention, and now it doesn't seem like i've missed anything yet
+
+![HDMI schematic](journal_images/HDMI_schematic.png)
+
+note: i'll still be sending the finished schematic and PCB design off for review because i'm not the most confident in my skills just yet (and it's good practice to do so anyways)
+
+**total time spent: 3 hours**

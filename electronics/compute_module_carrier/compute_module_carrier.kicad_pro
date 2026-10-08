@@ -416,13 +416,21 @@
         "uuid": "0e8f9c1c-943a-49f9-9263-929c04a59df9"
       }
     ],
-    "used_designators": "A1,BT1,#PWR1-4,C1,R1",
+    "used_designators": "R1-15,J1-2,C1-11,Q1-4,#PWR1-18,F1,FB1,U1-3,D1,A1,BT1",
     "variants": []
   },
   "sheets": [
     [
       "0e8f9c1c-943a-49f9-9263-929c04a59df9",
       "compute_module_carrier"
+    ],
+    [
+      "465d5fa2-2b07-43dc-beb0-546d7ab63342",
+      "LattePanda Mu"
+    ],
+    [
+      "f592a650-1145-4185-9943-84827c0ee5cb",
+      "HDMI"
     ]
   ],
   "text_variables": {},
