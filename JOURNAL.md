@@ -702,3 +702,37 @@ also planning to see if i can ask LattePanda for a free compute module, but i'll
 TBC
 
 **total time spent: 1.85 hours**
+
+# oct 07: designing the compute module carrier pt.2
+
+time to start placing things!
+
+note: sometimes i wish i had an extra monitor tbh... switching between virtual desktops just to look at datasheets and reference designs is painful
+
+![the 2309409-2 SODIMM 260 position connector dimensions](journal_images/2309409-2_dimensions.png)
+
+for the connector (with guidelines mentioned in an earlier entry) i'll be using a low profile one to save space for a potential heatsink (not an ideal solution for cooling in a closed space, i _know_) in particular, the [`2309409-2`](https://www.digikey.my/en/products/detail/te-connectivity-amp-connectors/2309409-2/9564359) with an offset height of 5.2mm and gold plated contacts
+
+note: i'll also be checking if these parts are available in the JLCPCB standard library for PCBA because i do **not** have the confidence to solder most of these high density components, especially considering the PCB's eventual size
+
+looking at it, the footprint LattePanda supplies looks to be about the same as the recommended PCB land pattern for it
+
+its RTC's going to use a CR1220 battery with the [`BAT-HLD-012-SMT-TR`](https://www.digikey.my/en/products/detail/te-connectivity-linx/BAT-HLD-012-SMT-TR/5361776) holder
+
+note: find old laptop later to use as second monitor for references
+
+the carrier's going to take 12V from the power management module over a barrel jack
+
+now i really have to decide what pins to breakout (also mentioned above)
+
+> - something to connect to the FC
+> - another something to connect to the sensor board
+> - something for power, most likely a barrel jack or an XT60
+> - M.2 for data storage on an SSD
+> - ethernet for the comms module (mk.2 but why not have it here anyways)
+> - a DisplayPort receptacle so i can hook it up to a monitor and debug stuff
+> - a couple of USB-C and USB-A receptacles to connect random peripherals
+
+for the displayport stuff, i'd have to use the eDP connector on the compute module itself and connect that via an FPC cable to a displayport and since i don't exactly feel like dealing with that sooooooo i'll be using HDMI instead
+
+**total time spent: 1.1 hours**
