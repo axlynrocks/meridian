@@ -416,7 +416,7 @@
         "uuid": "0e8f9c1c-943a-49f9-9263-929c04a59df9"
       }
     ],
-    "used_designators": "R1-15,J1-2,C1-11,Q1-4,#PWR1-18,F1,FB1,U1-3,D1,A1,BT1",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
@@ -431,6 +431,14 @@
     [
       "f592a650-1145-4185-9943-84827c0ee5cb",
       "HDMI"
+    ],
+    [
+      "ac6a79bf-e309-4dbf-95d1-08b606b40660",
+      "M.2 E and M Keys"
+    ],
+    [
+      "efac81b1-fd5f-450d-a440-21e25fec10ab",
+      "PCIe x4"
     ]
   ],
   "text_variables": {},

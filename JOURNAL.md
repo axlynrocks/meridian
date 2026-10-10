@@ -796,3 +796,21 @@ checking through [the docs](https://docs.lattepanda.com/content/mu_edition/desig
 note: i'll still be sending the finished schematic and PCB design off for review because i'm not the most confident in my skills just yet (and it's good practice to do so anyways)
 
 **total time spent: 3 hours**
+
+# oct 09: designing the compute module carrier pt.4
+
+note: i just realized today's oct 09 and i should probably be getting that email soon
+
+now about the M.2 keys, i'm going to have to include the E key, as in mk.1 i won't be making the comms module just yet so i still need something to test basic (above-water)wireless functionality
+
+and of course the M key is non-negotiable for storage
+
+![M2 E and M keys schematic](journal_images/M2_E_and_M_keys_schematic.png)
+
+broke out the compute module's pins according to the reference schematic, slightly modified them (will edit more later to add more peripherals, eg. audio over I2S, video over MIPI CSI-2)
+
+PCIe x4 halfway done, TBC
+
+![PCIe x4 schematic](journal_images/PCIe_x4_schematic.png)
+
+**total time spent: 2 hours**
