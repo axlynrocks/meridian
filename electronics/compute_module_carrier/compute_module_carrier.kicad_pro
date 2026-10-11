@@ -416,7 +416,7 @@
         "uuid": "0e8f9c1c-943a-49f9-9263-929c04a59df9"
       }
     ],
-    "used_designators": "",
+    "used_designators": "U4-5,R23-28,J6,#PWR43-52,T1,C39-58,Y1",
     "variants": []
   },
   "sheets": [
@@ -439,6 +439,10 @@
     [
       "efac81b1-fd5f-450d-a440-21e25fec10ab",
       "PCIe x4"
+    ],
+    [
+      "880c129e-14d3-4d37-ab5e-76bdc3e83b0b",
+      "Gigabit Ethernet"
     ]
   ],
   "text_variables": {},

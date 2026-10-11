@@ -814,3 +814,53 @@ PCIe x4 halfway done, TBC
 ![PCIe x4 schematic](journal_images/PCIe_x4_schematic.png)
 
 **total time spent: 2 hours**
+
+# oct 12: designing the compute module carrier pt.5
+
+i had to use a different ethernet receptacle than the one specified in the schematic, the [`7499311614`](https://www.digikey.my/en/products/detail/w%C3%BCrth-elektronik/7499311614/17829829) instead of the [`RB1-125BAG1A`](https://www.digikey.my/en/products/detail/wiznet/RB1-125BAG1A/3829637) cos apparently it was out of stock
+
+apparently the [`RTL8111H-CG`](https://www.lcsc.com/product-detail/C2761340.html) ethernet controller uses PCIe x1 to interface with the compute module even with the jack itself being 1000 BaseT
+
+note: research communication protocols
+
+had to make the symbol for the `RTL8111H-CG`myself (arguably better looking than the one off of LCSC)
+
+![a symbol for the RT8111H-CG that took me way too long to assign all the pins to](journal_images/kicad_RT8111H-CG_symbol.png)
+
+downloaded the ECAD models for the receptacle off of the [manufacturer's site's downloads section](https://www.we-online.com/components/products/download/KiCad_WE-RJ45LAN%20%28rev26d%29.zip) and [STEP file too](https://www.we-online.com/components/products/download/STP_7499311614%20%28rev1%29.stp)
+
+![stolen symbol for the 7499311614](journal_images/kicad_7499311614_symbol.png)
+
+![stolen footprint for the 7499311614](journal_images/kicad_7499311614_footprint.png)
+
+wow apparently the last 24 mins weren't recording cos i removed an external monitor. _amazing._
+
+decided to switch to one without PoE, the [`7499111614A`](https://www.digikey.my/en/products/detail/w%C3%BCrth-elektronik/7499111614A/5300370) (i'll keep the ECAD models though, planning to upgrade the carrier board 4 mk.2)
+
+currently figuring out how to modify another kicad symbol to match the pinout
+
+i found the internal schematic in [its datasheet](https://www.we-online.com/components/products/datasheet/7499151120.pdf) and copied that onto the symbol, and added pin names and edited everything to work with the footprint properly
+
+![stolen symbol for the 7499111614A](journal_images/kicad_7499111614A_symbol.png)
+
+![stolen footprint for the 7499111614A](journal_images/kicad_7499111614A_footprint.png)
+
+note: if you're working on a laptop or any other device with limited screen real estate, i HIGHLY recommend changing your screen scaling to 100% or lower, as most laptops, especially on windows have their scaling to some funny number like 125% (trust me it's a gamechanger i can finally see stuff properly)
+
+another note: when drawing a line in the symbol editor, right click (and hit exit or finish or whatever in the dropdown) to exit
+
+had to modify the symbol a lil bit more cos the pins were off-grid
+
+finally, i can get back to the schematic!!! (why oh why does symbol and footprint drafting always take so long maybe it's a skill issue)
+
+![Gigabit Ethernet schematic](journal_images/kicad_gigabit_ethernet_schematic.png)
+
+now for the GPIOs, i'm taking the same approach as the reference schematic, i.e. breaking out ALL the available I2C and UARTs, ~~but i'm also going to break out the SPI pins as well cos i won't be using them for a 2nd BIOS~~ ignore whatever i just said [cos apparently the SPI pins can **only** be used for the external BIOS.](https://docs.lattepanda.com/content/mu_edition/faq/?h=spi#faq)
+
+i'm also going to break out some of [the other GPIOs present](https://docs.lattepanda.com/content/mu_edition/gpio_ctl/) and see what i can do with them
+
+i'll be connecting the carrier module to the FC over UART, so i'll use [a 4 pin JST-SH connector](https://betaflight.com/docs/development/manufacturer/connector-standard#serial-uart-pin-configuration-rx-gps-and-other-5v-serial-devices), i'll also just add regular THT headers in series for debugging
+
+TBC
+
+**total time spent: 4.72 hours**
