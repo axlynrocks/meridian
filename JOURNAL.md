@@ -888,3 +888,52 @@ each horizontal thruster, besides being angled at 45deg pointing to the front or
 TBC
 
 **total time spent: 1 hour**
+
+# oct 13: designing the AUV hull and exterior pt.2
+
+while i wait for the manufacturer-provided .igs of the thruster to get stitched so i can actually use it, (technically restitch cos i did it yesterday and ended up having to redo it from scratch)
+
+time to look at the specs! (for simulations and config later)
+
+from the manufacturer's [product page](https://www.underwaterthruster.com/products/apisqueen-u2-mini-1-3kg-underwater-thruster-16v-130w?_pos=1&_sid=d18f2559b&_ss=r&variant=43815144915172)
+
+forward:
+
+| Voltage (V) | Throttle | Current (A) | Thrust (kg) |
+| ----------- | -------- | ----------- | ----------- |
+| 10          | 100%     | 4           | 0.70        |
+| 12          | 100%     | 5           | 0.90        |
+| 14          | 100%     | 7.0         | 1.10        |
+| 16          | 100%     | 8           | 1.30        |
+
+reverse:
+
+| Voltage (V) | Throttle | Current (A) | Thrust (kg) |
+| ----------- | -------- | ----------- | ----------- |
+| 10          | 100%     | 4           | 0.60        |
+| 12          | 100%     | 5           | 0.80        |
+| 14          | 100%     | 7.0         | 1.00        |
+| 16          | 100%     | 8           | 1.20        |
+
+and since the thruster i'm using is the 16V variant, each of the 6 thrusters is going to be able to generate 1.2 kg of thrust which should be enough given the AUV's weight
+
+note: ok lookout is reeeeaaallllllyyyyy buggy (no shade to the devs) but it has a huge problem with random disconnects and not letting the user know cos it paused for maybe 15 mins cos of an error and i wouldn't have realized if i didn't open the app window.
+
+```
+upload-url: HTTP 409 Conflict: {"error":"Session is
+complete, cannot upload"}
+```
+
+second, much angrier note: IT'S TELLING ME I HAVE 17 MINS INSTEAD OF THE 1 HOUR IT SHOWED ME EARLIER BEFORE I CLOSED IT WHAT THE !@#$%^&*() nvm whatever... back to work and for some reason fusion keeps crashing for no reason on the most basic parts ever
+
+added the mounts for the vertical thrusters
+
+![vertical thruster mount](journal_images/vertical_thruster_mount.png)
+
+now i'm modeling guards for the vertical thrusters after a manta ray to increase its hydrodynamicity (yay biomimetic features)
+
+![side fins](journal_images/vertical_thruster_side_fins.png)
+
+TBC
+
+**total time spent: 4.78 hours**
