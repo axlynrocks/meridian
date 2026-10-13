@@ -864,3 +864,27 @@ i'll be connecting the carrier module to the FC over UART, so i'll use [a 4 pin 
 TBC
 
 **total time spent: 4.72 hours**
+
+# oct 12: designing the AUV hull and exterior pt.1
+
+note: eating clam soup. it's tasty :D
+
+so i got to thinking, will the thrusters actually have enough power for the AUV to be both agile and maneuverable? how will it be able to execute tricky multi-DOF turns (eg. yaw & roll at the same time)
+
+i'm going to be adding the thrusters onto the hull now
+
+talking about thrusters, 3 will rotate clockwise, with the others in the opposite direction in order to counteract reaction forces from the spinning propellers
+
+![thruster diagram](journal_images/thruster_diagram_ardusub.png)
+
+after a whole lot of consideration, i've finally figured out how to attach the motors to the hull! since these thrusters have threaded inserts, but only on the reverse side of the mounting area, i'll just make the vertical thrusters be screwed onto a dovetail that is then secured onto the hull via its corresponding notch.
+
+as for the horizontal thrusters, i'm considering connecting them and their dovetail mounts to a pair of detachable rings that self-align to the hull, one for the front thrusters and one for the back thrusters
+
+each horizontal thruster, besides being angled at 45deg pointing to the front or back of the AUV is also positioned below the vertical thrusters to avoid the resulting inward jet stream from causing turbulence or intervering with the vertical ones
+
+![example thruster placement](journal_images/example_thruster_placement.png)
+
+TBC
+
+**total time spent: 1 hour**
