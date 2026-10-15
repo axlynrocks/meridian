@@ -937,3 +937,17 @@ now i'm modeling guards for the vertical thrusters after a manta ray to increase
 TBC
 
 **total time spent: 4.78 hours**
+
+# oct 15: designing the compute module carrier pt.6
+
+broke out the GPIOs
+
+![GPIO breakout schematic](journal_images/GPIO_breakout_schematic.png)
+
+for the USB connectors, i decided to deviate from the schematic a little bit and do away with the extra USB 2.0 ones
+
+![USB stacked connector schematic](journal_images/USB_connector_schematic.png)
+
+TBC
+
+**total time spent: 1.4 hours**
